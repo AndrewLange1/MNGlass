@@ -1,16 +1,17 @@
 import './index.css';
 import logo from './LOGO BLUE.png';
 import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
 import image1 from './images/image1.JPG';
 import image2 from './images/image2.JPG';
 import image3 from './images/image3.JPG';
 import image4 from './images/image4.JPG';
-import SwiperCore, { Pagination, Navigation } from 'swiper/core';
-SwiperCore.use([Pagination, Navigation]);
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
+import 'swiper/css';
+
+SwiperCore.use([Pagination, Navigation, Autoplay]);
+
+
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -121,12 +122,12 @@ function App() {
             </div>
           </div>
         </div>
-       <div className="h-[60vh] w-[40vw] mx-auto my-8 bg-black">
-        <Swiper
+        <div className="h-[80vh] w-[60vw] bg-black">
+          <Swiper
             spaceBetween={0}
             centeredSlides={true}
             autoplay={{
-              delay: 1000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -148,7 +149,7 @@ function App() {
               <img src={image4} alt="Image 4" className="w-full h-full object-cover" />
             </SwiperSlide>
           </Swiper>
-          </div>
+        </div>
         </div>
       </div>
   );
