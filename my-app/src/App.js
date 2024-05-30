@@ -1,6 +1,16 @@
 import './index.css';
 import logo from './LOGO BLUE.png';
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import image1 from './images/image1.JPG';
+import image2 from './images/image2.JPG';
+import image3 from './images/image3.JPG';
+import image4 from './images/image4.JPG';
+import SwiperCore, { Pagination, Navigation } from 'swiper/core';
+SwiperCore.use([Pagination, Navigation]);
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -15,7 +25,7 @@ function App() {
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
             <a href="https://trustworthyglass.com/gallery/">
-            Gallery
+              Gallery
             </a>
           </button>
           <div
@@ -33,22 +43,22 @@ function App() {
             </a>
             <a href="https://trustworthyglass.com/gallery/commercial-gallery/" className="block w-[13vw] h-[5vh] text-white hover:bg-navHover">
               <p className="ml-[0.75vw] pt-[1vh]">
-              Commercial Gallery
+                Commercial Gallery
               </p>
             </a>
             <a href="https://trustworthyglass.com/gallery/shower-door-gallery/" className="block w-full h-[5vh] text-white hover:bg-navHover">
               <p className="ml-[0.75vw] pt-[1vh]">
-              Shower Door Gallery
+                Shower Door Gallery
               </p>
             </a>
             <a href="https://trustworthyglass.com/gallery/miscellaneous-gallery/" className="block w-full h-[5vh] text-white hover:bg-navHover">
               <p className="ml-[0.75vw] pt-[1vh]">
-              Miscellaneous Gallery
+                Miscellaneous Gallery
               </p>
             </a>
             <a href="https://trustworthyglass.com/gallery/patterned-glass-gallery/" className="block w-full h-[5vh] text-white hover:bg-navHover">
               <p className="ml-[0.75vw] pt-[1vh]">
-              Patterned Glass Gallery
+                Patterned Glass Gallery
               </p>
             </a>
           </div>
@@ -97,21 +107,52 @@ function App() {
           <a href="https://trustworthyglass.com/technical-documents/">Technical Documents</a>
         </button>
       </div>
-      <div className="flex flex-row justify-center items-center h-[80vh] w-[40vw] custom-gradient">
-        <div className="flex flex-col items-center text-center w-full">
-          <p className="mt-[-18vh] text-white text-[2.75vh]">Trustworthy Glass is Your MN Glass Headquarter</p>
-          <div className="w-[33vw]">
-            <p className="mt-[15vh] text-white text-[2vh]">This group of text will be the longest one for now</p>
-            <p className="mt-[3vh] text-white text-[2vh]">All of them will keep getting smaller I think so</p>
-            <p className="mt-[3vh] text-white text-[2vh]">And then it will look kinda like a little funnel</p>
-            <p className="mt-[3vh] text-white text-[2vh]">Was that one too long? I really don't know</p>
-            <p className="mt-[3vh] text-white text-[2vh]">Maybe I should make more for them</p>
-            <p className="mt-[3vh] text-white text-[2vh]">This one's the a last one</p>
+      <div className="flex flex-row w-full">
+        <div className="flex flex-row justify-center items-center h-[80vh] w-[40vw] custom-gradient">
+          <div className="flex flex-col items-center text-center w-[33vw]">
+            <p className="mt-[-18vh] text-white text-[2.75vh]">Trustworthy Glass is Your MN Glass Headquarter</p>
+            <div className="w-[33vw]">
+              <p className="mt-[15vh] text-white text-[2vh]">This group of text will be the longest one for now</p>
+              <p className="mt-[3vh] text-white text-[2vh]">All of them will keep getting smaller I think so</p>
+              <p className="mt-[3vh] text-white text-[2vh]">And then it will look kinda like a little funnel</p>
+              <p className="mt-[3vh] text-white text-[2vh]">Was that one too long? I really don't know</p>
+              <p className="mt-[3vh] text-white text-[2vh]">Maybe I should make more for them</p>
+              <p className="mt-[3vh] text-white text-[2vh]">This one's the a last one</p>
+            </div>
+          </div>
+        </div>
+       <div className="h-[60vh] w-[40vw] mx-auto my-8 bg-black">
+        <Swiper
+            spaceBetween={0}
+            centeredSlides={true}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            className="w-full h-full"
+          >
+            <SwiperSlide>
+              <img src={image1} alt="Image 1" className="w-full h-full object-cover" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image2} alt="Image 2" className="w-full h-full object-cover" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image3} alt="Image 3" className="w-full h-full object-cover" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={image4} alt="Image 4" className="w-full h-full object-cover" />
+            </SwiperSlide>
+          </Swiper>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
 export default App;
+
