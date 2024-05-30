@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.striped-background {
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 4px,
+      #c3dff2 5px,
+      #c3dff2 5px
+    );
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+body {
+  overflow-x: hidden;
+}
