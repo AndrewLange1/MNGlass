@@ -14,6 +14,7 @@ module.exports = {
         estimate: '#375ea8',
         bh: '#3a60a6',
         pay: '#fcde03',
+        navHover: '#405cd4',
       },
     },
   },
