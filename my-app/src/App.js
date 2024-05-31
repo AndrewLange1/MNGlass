@@ -5,13 +5,18 @@ import image1 from './images/image1.JPG';
 import image2 from './images/image2.JPG';
 import image3 from './images/image3.JPG';
 import image4 from './images/image4.JPG';
+import mng from './images/MNG.jpg';
+import mha from './images/MHA.jpg';
+import msca from './images/MSCA.jpg';
+import nga from './images/NGA.jpg';
+import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Navigation, Autoplay } from 'swiper';
 import 'swiper/css';
-
-SwiperCore.use([Pagination, Navigation, Autoplay]);
-
-
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css';
+import SwiperCore from 'swiper';
+SwiperCore.use([Autoplay]);
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -30,7 +35,7 @@ function App() {
             </a>
           </button>
           <div
-            className={`absolute ${isDropdownOpen ? '' : 'hidden'} bg-bottom shadow-lg w-[14vw] left-0 bottom-[-26vh]`}
+            className={`absolute ${isDropdownOpen ? '' : 'hidden'} bg-bottom shadow-lg w-[14vw] left-0 bottom-[-26vh] z-20`}
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
@@ -109,9 +114,9 @@ function App() {
         </button>
       </div>
       <div className="flex flex-row w-full">
-        <div className="flex flex-row justify-center items-center h-[80vh] w-[40vw] custom-gradient">
-          <div className="flex flex-col items-center text-center w-[33vw]">
-            <p className="mt-[-18vh] text-white text-[2.75vh]">Trustworthy Glass is Your MN Glass Headquarter</p>
+        <div className="flex flex-row justify-center items-center h-[80vh] w-[42vw] custom-gradient">
+          <div className="flex flex-col items-center text-center w-[40vw]">
+            <p className="mt-[-18vh] text-white text-[2.75vh]">Trustworthy Glass is Your MN Glass Headquarters</p>
             <div className="w-[33vw]">
               <p className="mt-[15vh] text-white text-[2vh]">This group of text will be the longest one for now</p>
               <p className="mt-[3vh] text-white text-[2vh]">All of them will keep getting smaller I think so</p>
@@ -122,18 +127,14 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="h-[80vh] w-[60vw] bg-black">
+        <div className="h-[80vh] w-[58vw] bg-black">
           <Swiper
             spaceBetween={0}
             centeredSlides={true}
             autoplay={{
-              delay: 3000,
+              delay: 3500,
               disableOnInteraction: false,
             }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
             className="w-full h-full"
           >
             <SwiperSlide>
@@ -150,6 +151,218 @@ function App() {
             </SwiperSlide>
           </Swiper>
         </div>
+        </div>
+        <div className="h-[118vh] w-full">
+            <div className="text-center items-center justify-center flex flex-col">
+              <p className="text-[4.15vh] mt-[4.5vh] text-header">OUR SERVICES</p>
+              <p className="text-[2.3vh] mt-[3vh] text-gray-500 font-bold">Trustworthy glass is a family owned and operated full-service glass company.</p>
+              <p className="text-[2vh] mt-[2vh] text-gray-500">We provide our services in the twin cities and surrounding suburbs. We supply and install all forms of glass products, including:</p>
+            </div>
+            <div className="flex flex-row">
+              <img src={image1} className="h-[70vh] w-[25vw] mt-[12.5vh] ml-[10vw]"></img>
+              <div className="flex flex-col w-[26vw] text-start items-start justify-start">
+                <div className="flex flex-row items-start justify-start">
+                  <svg className="mt-[13vh] ml-[1vw]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 mt-[13vh] text-[2vh]">Frameless shower doors</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <div className="flex flex-col">
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Residential and commercial Glass</p>
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">replacement and install.</p>
+                  </div>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <div className="flex flex-col">
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Commercial storefronts</p>
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">closers, sweeps, thresholds, panics,</p>
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">locks</p>
+                  </div>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <div className="flex flex-col">
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Mirrors, mirrors, framed mirrors,</p>
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">bathroom mirrors</p>
+                  </div>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <div className="flex flex-col">
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Pattern glass, obscure glass, low iron</p>
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">glass, frosted glass</p>
+                  </div>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <div className="flex flex-col">
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Shelves, tabletops, cabinet, picture</p>
+                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">frames</p>
+                  </div>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Screens and storm windows</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Fireplace glass</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Mall storefronts</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Mall storefronts</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Showcase Glass</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Caulking</p>
+                </div>
+                <div className="flex flex-row mt-[1vh] ml-[1vw]">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                    <g>
+                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
+                    </g>
+                    <g>
+                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
+                    </g>
+                  </svg>
+                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Reputty Windows</p>
+                </div>
+              </div>
+              <img src={image1} className="h-[70vh] w-[25w] mt-[12.5vh] ml-[3vw]"></img>
+            </div>
+        </div>
+        <div className="text-center items-center justify-center">
+            <p className="text-gray-500 font-bold text-[2.35vh]">We also work with business owners and property managers to repair the following:</p>
+        </div>
+        <div className="mt-[3vh] flex flex-row text-start items-start justify-start text-gray-500 text-[1.9vh]">
+            <div className="ml-[15vw]">
+              <ul style={{ listStyleType: 'disc', paddingLeft: '0.5vw' }}>
+                <li>Continuous hinges</li>
+                <li className="mt-[1vh]">Panics and exit devices</li>
+                <li className="mt-[1vh]">Fixing leaks</li>
+              </ul>
+            </div>
+            <div className="ml-[10vw]">
+              <ul style={{ listStyleType: 'disc', paddingLeft: '0.5vw' }}>
+                <li>Closers and crash chains</li>
+                <li className="mt-[1vh]">Thresholds and door sweeps</li>
+                <li className="mt-[1vh]">
+                  Install safety glass when required by
+                  <p>code</p>
+                  </li>
+              </ul>
+            </div>
+            <div className="ml-[3vw]">
+              <ul style={{ listStyleType: 'disc', paddingLeft: '0.5vw' }}>
+                <li>Pivots</li>
+                <li className="mt-[1vh]">Emergency service and board ups</li>
+              </ul>
+            </div>
+        </div>
+        <div className="mt-[12vh] text-center items-center justify-center flex flex-row">
+            <p className="text-header text-[3vh]">MEMBER OF:</p>
+        </div>
+        <div className="mt-[3vh] items-center justify-center flex flex-row">
+          <img src={mng} className="h-[10%] w-[10%] mr-[2vw]"></img>
+          <img src={msca} className="mr-[2vw]"></img>
+          <img src={nga} className="mr-[2vw]"></img>
+          <img src={mha} className="mr-[2vw]"></img>
+        </div>
+        <div className="h-[5.35vh] w-full mt-[5vh] bg-header text-center justify-center">
+          <p className="text-white text-[1.65vh] pt-[1.45vh]">© 2019 Trustworthy Glass. All Rights Reserved.</p>
         </div>
       </div>
   );
