@@ -23,111 +23,113 @@ function App() {
 
   return (
     <div>
-      <div className="absolute right-[41.7%] top-[38.3%]">
+      <div className="hidden md:flex l:flex xl:flex xl:h-[51px] l:h-[51px] md:h-[65px] w-full bg-header items-center justify-center px-4">
+        <p className="text-white l:text-[14px] xl:text-[14px] md:text-[12px] text-montesserat text-center">
+          Residential and Commercial Glass installation for the Twin Cities, St Paul, Minneapolis, and surrounding suburbs Anoka, Ramsey, and Hennepin Counties.
+        </p>
+      </div>
+    <div className="md:h-[263px] l:h-[263px] xl:h-[263px] sm:h-[400px] w-full bg-lightBlue py-6">
+      <div className="h-full w-full striped-background flex flex-col md:flex-row items-center md:items-start">
+        <div className="mt-6 md:mt-[35px] md:ml-[11.5vw]">
+          <img
+            src={logo}
+            className="h-20 w-auto sm:h-24 md:h-28 lg:h-40 xl:h-[180px]"
+            alt="Logo"
+          />
+          </div>
+      <div className="flex flex-col items-center text-center mt-6 md:mt-0 md:ml-auto md:mr-[18%]">
+        <p className="text-estimate text-2xl md:text-[31px] mt-2 md:mt-[44px]">FREE ESTIMATES</p>
+        <button className="h-[60px] w-[200px] md:h-[75px] md:w-[240px] rounded-[3px] mt-4 md:mt-[15px] bg-bottom hover:bg-bh cursor-pointer">
+          <a href="https://trustworthyglass.com/contact/" className="flex flex-col">
+            <p className="text-white text-lg md:text-[21px]">CONTACT US NOW</p>
+            <p className="text-white mt-[-3px] text-base md:text-[18px]">651-633-6290</p>
+          </a>
+        </button>
+        <p className="text-gray-500 text-sm md:text-[16px] mt-4 md:mt-[20px]">4640 Chatsworth St. N, Shoreview, MN 55126</p>
+      </div>
+    </div>
+  </div>
+      <div className="h-[135px] w-full bg-bottom border-b border-black flex flex-row items-start text-start justify-start">
+        <button className="h-[38px] w-[90px] ml-[178px] mt-[22px] outline outline-black outline-[0.1vh] text-[16px] cursor-pointer text-black bg-pay rounded-[0.25vh] hover:bg-bottom hover:text-white nav-bar">
+          <a href="https://trustworthyglass.com/pay-online/">Pay Now</a>
+        </button>
+        <button className="bg-bottom hover:bg-navHover w-[180px] h-[53px] text-[17px] ml-[147px] mt-[12px] text-white cursor-pointer">
+          <a href="https://trustworthyglass.com/shower-enclosures/">Shower Enclosures</a>
+        </button>
+        <button className="bg-bottom hover:bg-navHover w-[120px] h-[53px] text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer">
+          <a href="https://trustworthyglass.com/residential/">Residential</a>
+        </button>
+        <button className="bg-bottom hover:bg-navHover w-[126px] h-[53px] text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer">
+          <a href="https://trustworthyglass.com/commercial/">Commercial</a>
+        </button>
         <div className="relative group">
-          <button
-            className="bg-bottom hover:bg-navHover w-[5.25vw] h-[6.2vh] text-[1.9vh] cursor-pointer text-white"
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <a href="https://trustworthyglass.com/gallery/">
-              Gallery
-            </a>
-          </button>
-          <div
-            className={`absolute ${isDropdownOpen ? '' : 'hidden'} bg-bottom shadow-lg w-[14vw] left-0 bottom-[-26vh] z-20`}
-            onMouseEnter={() => setIsDropdownOpen(true)}
-            onMouseLeave={() => setIsDropdownOpen(false)}
-          >
-            <a href="https://trustworthyglass.com/gallery/residential-glass-gallery/" className="block w-full h-[6vh] text-white hover:bg-navHover">
+      <button
+        className="bg-bottom hover:bg-navHover w-[80px] h-[53px] text-[17px] cursor-pointer mt-[11px] text-white"
+        onMouseEnter={() => setIsDropdownOpen(true)}
+        onMouseLeave={() => setIsDropdownOpen(false)}
+      >
+        <a href="https://trustworthyglass.com/gallery/">Gallery</a>
+      </button>
+      <div
+        className={`absolute ${isDropdownOpen ? '' : 'hidden'} bg-bottom shadow-lg w-[215px] left-0 bottom-[-217px] z-20`}
+        onMouseEnter={() => setIsDropdownOpen(true)}
+        onMouseLeave={() => setIsDropdownOpen(false)}
+      >
+            <a href="https://trustworthyglass.com/gallery/residential-glass-gallery/" className="block w-full h-[53px] text-white hover:bg-navHover">
               <div className="flex flex-col">
-                <p className="ml-[0.75vw] mt-[0.25vh]">
+                <p className="ml-[10px] mt-[4px]">
                   Residential Glass
                 </p>
-                <p className="ml-[0.75vw] mt-[-0.25vh]">Gallery</p>
+                <p className="ml-[10px] mt-[-3px]">Gallery</p>
               </div>
             </a>
-            <a href="https://trustworthyglass.com/gallery/commercial-gallery/" className="block w-[13vw] h-[5vh] text-white hover:bg-navHover">
-              <p className="ml-[0.75vw] pt-[1vh]">
+            <a href="https://trustworthyglass.com/gallery/commercial-gallery/" className="block h-[41px] text-white hover:bg-navHover">
+              <p className="ml-[10px] pt-[9px]">
                 Commercial Gallery
               </p>
             </a>
-            <a href="https://trustworthyglass.com/gallery/shower-door-gallery/" className="block w-full h-[5vh] text-white hover:bg-navHover">
-              <p className="ml-[0.75vw] pt-[1vh]">
+            <a href="https://trustworthyglass.com/gallery/shower-door-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover">
+              <p className="ml-[10px] pt-[9px]">
                 Shower Door Gallery
               </p>
             </a>
-            <a href="https://trustworthyglass.com/gallery/miscellaneous-gallery/" className="block w-full h-[5vh] text-white hover:bg-navHover">
-              <p className="ml-[0.75vw] pt-[1vh]">
+            <a href="https://trustworthyglass.com/gallery/miscellaneous-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover">
+              <p className="ml-[10px] pt-[9px]">
                 Miscellaneous Gallery
               </p>
             </a>
-            <a href="https://trustworthyglass.com/gallery/patterned-glass-gallery/" className="block w-full h-[5vh] text-white hover:bg-navHover">
-              <p className="ml-[0.75vw] pt-[1vh]">
+            <a href="https://trustworthyglass.com/gallery/patterned-glass-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover">
+              <p className="ml-[10px] pt-[9px]">
                 Patterned Glass Gallery
               </p>
             </a>
           </div>
         </div>
-      </div>
-      <div className="h-[6.2vh] w-full bg-header flex items-center text-center justify-center">
-        <p className="text-white text-[1.55vh] mt-[0vh] mr-[2vw] text-montesserat">
-          Residential and Commercial Glass installation for the Twin Cities, St Paul, Minneapolis and surrounding suburbs Anoka, Ramsey, and Hennepin Counties.
-        </p>
-      </div>
-      <div className="h-[30.8vh] w-full bg-lightBlue">
-        <div className="h-full w-full striped-background flex flex-row">
-          <div className="absolute top-[12%]">
-            <img src={logo} className='h-[95%] w-[60%] ml-[12vw]' alt="Logo" />
-          </div>
-          <div className="flex flex-col h-[25.5vh] w-[25vw] absolute right-[18%] items-center text-center justify-center">
-            <div className="text-estimate absolute top-[18.5%] text-[3.65vh]">FREE ESTIMATE</div>
-            <button className="h-[8.5vh] w-[16.25vw] rounded-[0.35vh] mt-[9.5vh] bg-bottom hover:bg-bh cursor-pointer">
-              <a href="https://trustworthyglass.com/contact/" className="flex flex-col">
-                <p className="text-white text-[2.25vh]">CONTACT US NOW</p>
-                <p className="text-white mt-[-0.5vh] text-[2.25vh]">651-633-6290</p>
-              </a>
-            </button>
-            <p className="text-gray-500 text-[1.75vh] mt-[2vh]">4640 Chatsworth St. N, Shoreview, MN 55126</p>
-          </div>
+        <div className="flex flex-wrap">
+          <button className="xl:mt-[15px] bg-bottom hover:bg-navHover w-[168px] h-[53px] full lg:mt-[10px] text-[17px] ml-[7px] text-white text-center justify-center cursor-pointer">
+            <a href="https://trustworthyglass.com/vendors-partners/" className="xl:mt-[10px]">Vendors/Partners</a>
+          </button>
+          <button className="bg-bottom hover:bg-navHover lg:absolute lg:mt-[68px] lg:right-[40vw] w-[205px] full text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer text-center justify-center">
+            <a href="https://trustworthyglass.com/technical-documents/" className="xl:mt-[10px]">Technical Documents</a>
+          </button>
         </div>
       </div>
-      <div className="h-[9.7vh] w-full bg-bottom border-b border-black flex flex-row items-start text-start justify-start">
-        <button className="h-[4.2vh] w-[5.5vw] ml-[12vw] mt-[2.5vh] outline outline-black outline-[0.1vh] text-[1.9vh] cursor-pointer text-black bg-pay rounded-[0.25vh] hover:bg-bottom hover:text-white">
-          <a href="https://trustworthyglass.com/pay-online/">Pay Now</a>
-        </button>
-        <button className="bg-bottom hover:bg-navHover w-[12vw] h-[6.2vh] text-[1.9vh] ml-[7.5vw] mt-[1.3vh] text-white cursor-pointer">
-          <a href="https://trustworthyglass.com/shower-enclosures/">Shower Enclosures</a>
-        </button>
-        <button className="bg-bottom hover:bg-navHover w-[7.75vw] h-[6.2vh] text-[1.9vh] ml-[0.05vw] mt-[1.3vh] text-white cursor-pointer">
-          <a href="https://trustworthyglass.com/residential/">Residential</a>
-        </button>
-        <button className="bg-bottom hover:bg-navHover w-[8vw] h-[6.2vh] text-[1.9vh] ml-[0.05vw] mt-[1.3vh] text-white cursor-pointer">
-          <a href="https://trustworthyglass.com/commercial/">Commercial</a>
-        </button>
-        <div className="w-[5.5vw]"></div>
-        <button className="bg-bottom hover:bg-navHover w-[11.25vw] h-[6.2vh] text-[1.9vh] ml-[0.05vw] mt-[1.3vh] text-white cursor-pointer">
-          <a href="https://trustworthyglass.com/vendors-partners/">Vendors/Partners</a>
-        </button>
-        <button className="bg-bottom hover:bg-navHover w-[13vw] h-[6.2vh] text-[1.9vh] ml-[0.05vw] mt-[1.3vh] text-white cursor-pointer">
-          <a href="https://trustworthyglass.com/technical-documents/">Technical Documents</a>
-        </button>
-      </div>
       <div className="flex flex-row w-full">
-        <div className="flex flex-row justify-center items-center h-[80vh] w-[42vw] custom-gradient">
+        <div className="flex flex-row justify-center items-center h-[687px] w-[42vw] custom-gradient">
           <div className="flex flex-col items-center text-center w-[40vw]">
-            <p className="mt-[-18vh] text-white text-[2.75vh]">Trustworthy Glass is Your MN Glass Headquarters</p>
+            <p className="mt-[-140px] text-white text-[23px]">Trustworthy Glass is your MN Glass Headquarters</p>
             <div className="w-[33vw]">
-              <p className="mt-[15vh] text-white text-[2vh]">This group of text will be the longest one for now</p>
-              <p className="mt-[3vh] text-white text-[2vh]">All of them will keep getting smaller I think so</p>
-              <p className="mt-[3vh] text-white text-[2vh]">And then it will look kinda like a little funnel</p>
-              <p className="mt-[3vh] text-white text-[2vh]">Was that one too long? I really don't know</p>
-              <p className="mt-[3vh] text-white text-[2vh]">Maybe I should make more for them</p>
-              <p className="mt-[3vh] text-white text-[2vh]">This one's the a last one</p>
+              {/* <p className="mt-[15vh] text-white text-[2vh]">This group of text will be the longest one for now</p> */}
+                  <p className="mt-[130px] text-white text-[18px]">Trustworthy Glass is family owned and operated since</p>
+              <p className="mt-[25px] text-white text-[18px]">2008. We are proud to be a part of the Shoreview</p>
+              <p className="mt-[25px] text-white text-[18px]">area and surrounding communities. We take</p>
+              <p className="mt-[25px] text-white text-[18px]">pride in our customer service and our</p>
+              <p className="mt-[25px] text-white text-[18px]">installer's attention to detail.</p>
+              <p className="mt-[25px] text-white text-[18px]">Give us a call today!</p>
             </div>
           </div>
         </div>
-        <div className="h-[80vh] w-[58vw] bg-black">
+        <div className="h-[687px] w-[58vw] bg-black">
           <Swiper
             spaceBetween={0}
             centeredSlides={true}
@@ -152,17 +154,25 @@ function App() {
           </Swiper>
         </div>
         </div>
-        <div className="h-[118vh] w-full">
+        <div className="h-[1050px] w-full">
             <div className="text-center items-center justify-center flex flex-col">
-              <p className="text-[4.15vh] mt-[4.5vh] text-header">OUR SERVICES</p>
-              <p className="text-[2.3vh] mt-[3vh] text-gray-500 font-bold">Trustworthy glass is a family owned and operated full-service glass company.</p>
-              <p className="text-[2vh] mt-[2vh] text-gray-500">We provide our services in the twin cities and surrounding suburbs. We supply and install all forms of glass products, including:</p>
+              <p className="text-[35px] mt-[34px] text-header">OUR SERVICES</p>
+              <p className="text-[20px] mt-[38px] text-gray-500 font-bold">Trustworthy glass is a family owned and operated full-service glass company.</p>
+              <p className="text-[15.6px] mt-[15px] text-gray-500">We provide our services in the twin cities and surrounding suburbs. We supply and install all forms of glass products, including:</p>
             </div>
-            <div className="flex flex-row">
-              <img src={image1} className="h-[70vh] w-[25vw] mt-[12.5vh] ml-[10vw]"></img>
-              <div className="flex flex-col w-[26vw] text-start items-start justify-start">
+            <div className="flex flex-col md:flex-row md:items-start">
+              <img 
+                src={image1} 
+                className="
+                  h-[200px] w-auto max-h-[70vh] mt-[60px] ml-[20px]
+                  md:h-[60vh] md:w-auto md:max-h-[300px] md:mt-[12.5vh] md:ml-[10vw]
+                  lg:h-[42vw] lg:w-auto lg:max-h-none
+                  xl:h-[600px] xl:w-auto"
+              >
+              </img>
+              <div className="flex flex-col w-[26vw] ml-[25px] text-[17px] text-start items-start justify-start">
                 <div className="flex flex-row items-start justify-start">
-                  <svg className="mt-[13vh] ml-[1vw]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg className="mt-[13vh] ml-[1vw]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -170,10 +180,10 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 mt-[13vh] text-[2vh]">Frameless shower doors</p>
+                  <p className="ml-[0.25vw] text-gray-500 mt-[13vh]">Frameless shower doors</p>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -182,12 +192,12 @@ function App() {
                     </g>
                   </svg>
                   <div className="flex flex-col">
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Residential and commercial Glass</p>
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">replacement and install.</p>
+                    <p className="ml-[0.25vw] text-gray-500">Residential and commercial Glass</p>
+                    <p className="ml-[0.25vw] text-gray-500">replacement and install</p>
                   </div>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -196,13 +206,13 @@ function App() {
                     </g>
                   </svg>
                   <div className="flex flex-col">
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Commercial storefronts</p>
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">closers, sweeps, thresholds, panics,</p>
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">locks</p>
+                    <p className="ml-[0.25vw] text-gray-500">Commercial storefronts</p>
+                    <p className="ml-[0.25vw] text-gray-500">closers, sweeps, thresholds, panics,</p>
+                    <p className="ml-[0.25vw] text-gray-500">locks</p>
                   </div>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -211,12 +221,12 @@ function App() {
                     </g>
                   </svg>
                   <div className="flex flex-col">
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Mirrors, mirrors, framed mirrors,</p>
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">bathroom mirrors</p>
+                    <p className="ml-[0.25vw] text-gray-500">Mirrors, mirror walls, framed mirrors,</p>
+                    <p className="ml-[0.25vw] text-gray-500">bathroom mirrors</p>
                   </div>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -225,12 +235,12 @@ function App() {
                     </g>
                   </svg>
                   <div className="flex flex-col">
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Pattern glass, obscure glass, low iron</p>
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">glass, frosted glass</p>
+                    <p className="ml-[0.25vw] text-gray-500">Pattern glass, obscure glass, low iron</p>
+                    <p className="ml-[0.25vw] text-gray-500">glass, frosted glass</p>
                   </div>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -239,12 +249,12 @@ function App() {
                     </g>
                   </svg>
                   <div className="flex flex-col">
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Shelves, tabletops, cabinet, picture</p>
-                    <p className="ml-[0.25vw] text-gray-500 text-[2vh]">frames</p>
+                    <p className="ml-[0.25vw] text-gray-500">Shelves, tabletops, cabinet, picture</p>
+                    <p className="ml-[0.25vw] text-gray-500">frames</p>
                   </div>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -252,10 +262,10 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Screens and storm windows</p>
+                  <p className="ml-[0.25vw] text-gray-500">Screens and storm windows</p>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -263,10 +273,10 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Fireplace glass</p>
+                  <p className="ml-[0.25vw] text-gray-500">Fireplace glass</p>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -274,10 +284,10 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Mall storefronts</p>
+                  <p className="ml-[0.25vw] text-gray-500">Mall storefronts</p>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -285,10 +295,10 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Mall storefronts</p>
+                  <p className="ml-[0.25vw] text-gray-500">Showcase Glass</p>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -296,10 +306,10 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Showcase Glass</p>
+                  <p className="ml-[0.25vw] text-gray-500">Caulking</p>
                 </div>
                 <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
                     </g>
@@ -307,21 +317,18 @@ function App() {
                       <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
                     </g>
                   </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Caulking</p>
-                </div>
-                <div className="flex flex-row mt-[1vh] ml-[1vw]">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="3.5vw" height="3.5vh" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                    <g>
-                      <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
-                    </g>
-                    <g>
-                      <circle fill="none" stroke="#446bfa" stroke-width="3.5" stroke-miterlimit="10" cx="32" cy="32" r="30.999"/>
-                    </g>
-                  </svg>
-                  <p className="ml-[0.25vw] text-gray-500 text-[2vh]">Reputty Windows</p>
+                  <p className="ml-[0.25vw] text-gray-500">Reputty Windows</p>
                 </div>
               </div>
-              <img src={image1} className="h-[70vh] w-[25w] mt-[12.5vh] ml-[3vw]"></img>
+              <img 
+                src={image1} 
+                className="
+                  h-[200px] w-auto max-h-[70vh] mt-[60px] ml-[20px]
+                  md:h-[60vh] md:w-auto md:max-h-[300px] md:mt-[12.5vh] md:ml-[2vw]
+                  lg:h-[42vw] lg:w-auto lg:max-h-none
+                  xl:h-[600px] xl:w-auto"
+              >
+              </img>
             </div>
         </div>
         <div className="text-center items-center justify-center">

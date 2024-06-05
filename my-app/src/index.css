@@ -39,3 +39,7 @@ body {
 .custom-gradient {
   background: linear-gradient(to bottom, #446bfa, #75c5fa);
 }
+
+.nav-bar {
+  overflow:visible;
+}
