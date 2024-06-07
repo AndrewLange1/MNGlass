@@ -107,7 +107,7 @@ function App() {
             </a>
           </div>
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-row">
           <button className="nav-buttons bg-bottom hover:bg-navHover w-[168px] h-[53px] mt-[11px] text-[17px] ml-[2px] text-white text-center justify-center cursor-pointer venPar">
             <a href="https://trustworthyglass.com/vendors-partners/">Vendors/Partners</a>
           </button>

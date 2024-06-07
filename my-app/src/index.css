@@ -69,7 +69,8 @@
   }
   .payButton {
     position: absolute;
-    left: 33.5%;
+    left: 40.5%;
+    transform: translateX(-50%);
     margin-bottom: 140px;
   }
 }
