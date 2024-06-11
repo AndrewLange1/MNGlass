@@ -46,14 +46,14 @@ function App() {
       </div>
     <div className="h-[263px] second w-full bg-lightBlue justify-center">
       <div className="h-full w-full striped-background flex flex-row flex2 items-center logo2-div">
-        <div className="mt-6 flex w-full outline outline-black">
+        <div className="flex w-full items-center justify-center">
           <img
             src={logo}
-            className="h-[10VW] w-auto ml-[160px] logo2"
+            className="h-[14VW] w-auto ml-[40px] logo2"
             alt="Logo"
           />
           </div>
-      <div className="flex flex-col items-center text-center justify-center ml-[15%]">
+      <div className="flex flex-col items-center text-center justify-center contactNow">
         <p className="text-estimate text-2xl text-center items-center">FREE ESTIMATES</p>
         <button className="h-[60px] w-[200px] md:h-[75px] md:w-[240px] rounded-[3px] mt-4 md:mt-[15px] bg-bottom hover:bg-bh cursor-pointer">
           <a href="https://trustworthyglass.com/contact/" className="flex flex-col">
@@ -61,7 +61,7 @@ function App() {
             <p className="text-white mt-[-3px] text-base md:text-[18px]">651-633-6290</p>
           </a>
         </button>
-        <p className="text-gray-500 w-auto text-sm md:text-[16px] mt-4 md:mt-[20px]">4640 Chatsworth St. N, Shoreview, MN 55126</p>
+        <p className="text-gray-500 w-[400px] text-sm md:text-[16px] mt-4 md:mt-[20px]">4640 Chatsworth St. N, Shoreview, MN 55126</p>
       </div>
     </div>
   </div>
@@ -151,14 +151,14 @@ function App() {
       <div className={`flex flex-row w-full content-below ${isMenuOpen ? 'menu-open' : ''}`}>
         <div className="flex flex-row justify-center h-[687px] w-[42vw] custom-gradient">
           <div className="flex flex-col text-center w-[40vw]">
-            <p className="text-white text-[23px] mt-[70px] pt-0">Trustworthy Glass is your MN Glass Headquarters</p>
+            <p className="text-white text-[23px] mt-[70px] headquarters">Trustworthy Glass is your MN Glass Headquarters</p>
             <div className="w-full justify-center mx-auto">
-              <p className="mt-[130px] text-white text-[18px]">Trustworthy Glass is family owned and operated since</p>
-              <p className="mt-[25px] text-white text-[18px]">2008. We are proud to be a part of the Shoreview</p>
-              <p className="mt-[25px] text-white text-[18px]">area and surrounding communities. We take</p>
-              <p className="mt-[25px] text-white text-[18px]">pride in our customer service and our</p>
-              <p className="mt-[25px] text-white text-[18px]">installer's attention to detail.</p>
-              <p className="mt-[25px] text-white text-[18px]">Give us a call today!</p>
+              <p className="mt-[130px] text-white headquarters">Trustworthy Glass is family owned and operated since</p>
+              <p className="mt-[25px] text-white headquarters">2008. We are proud to be a part of the Shoreview</p>
+              <p className="mt-[25px] text-white headquarters">area and surrounding communities. We take</p>
+              <p className="mt-[25px] text-white headquarters">pride in our customer service and our</p>
+              <p className="mt-[25px] text-white headquarters">installer's attention to detail.</p>
+              <p className="mt-[25px] text-white headquarters">Give us a call today!</p>
             </div>
           </div>
         </div>
@@ -205,7 +205,7 @@ function App() {
                 >
                 </img>
               </div>
-              <div className="flex flex-col w-[26vw] ml-[25px] text-[17px] text-start items-start justify-start">
+              <div className="flex flex-col w-[1000px] ml-[25px] text-[17px] text-start items-start justify-start">
                 <div className="flex flex-row items-start justify-start checkmarks">
                   <svg className="mt-[13vh] ml-[1vw]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>

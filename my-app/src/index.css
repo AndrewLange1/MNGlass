@@ -36,14 +36,12 @@
   }
   .logo2 {
     height: 120px;
-    margin-right: 100px;
+    margin-right: 60px;
+    margin-bottom: 25px;
   }
   .logo2-div {
     align-items: center;
     justify-content: center;
-  }
-  .bottom-content {
-    margin-top: 240vh;
   }
   .checkmarks {
     justify-content: center;
@@ -151,6 +149,12 @@
   }
 }
 
+@media (max-width: 714px) {
+  .headquarters {
+    font-size: 15px;
+  }
+}
+
 .nav_bar {
   position: relative;
 }
@@ -170,6 +174,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .contactNow {
+    margin-right: 15%;
+  }
+}
+
+@media (max-width: 767px) {
+  .bottom-content {
+    margin-top: 150vh;
   }
 }
 
