@@ -1,6 +1,6 @@
 import './index.css';
 import logo from './LOGO BLUE.png';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import image1 from './images/image1.JPG';
 import image2 from './images/image2.JPG';
 import image3 from './images/image3.JPG';
@@ -22,20 +22,34 @@ function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 822 && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isMenuOpen]);
+
 
   return (
     <div>
-      <div className="header xl:h-[51px] l:h-[51px] md:h-[65px] w-full bg-header items-center justify-center px-4">
-        <p className="text-white l:text-[14px] xl:text-[14px] md:text-[12px] text-montesserat text-center">
+      <div className="hidden header xl:h-[51px] l:h-[51px] md:h-[65px] w-full bg-header items-center justify-center px-4">
+        <p className="text-white l:text-[14px] xl:text-[14px] md:text-[12px] text-montesserat items-center text-center">
           Residential and Commercial Glass installation for the Twin Cities, St Paul, Minneapolis, and surrounding suburbs Anoka, Ramsey, and Hennepin Counties.
         </p>
       </div>
     <div className="h-[263px] second w-full bg-lightBlue justify-center">
-      <div className="h-full w-full striped-background flex flex-row flex2 items-center">
-        <div className="mt-6">
+      <div className="h-full w-full striped-background flex flex-row flex2 items-center logo2-div">
+        <div className="mt-6 flex w-full outline outline-black">
           <img
             src={logo}
-            className="h-[10VW] w-auto"
+            className="h-[10VW] w-auto ml-[160px] logo2"
             alt="Logo"
           />
           </div>
@@ -51,62 +65,52 @@ function App() {
       </div>
     </div>
   </div>
-      <div className="med-large payNow w-full bg-bottom border-b border-black flex flex-row items-start text-start justify-start">
-        <button className="h-[38px] min-w-[90px] payButton ml-[10%] mr-auto justify-center items-center xl:ml-[10%] mt-[22px] outline outline-black outline-[1px] text-[16px] cursor-pointer text-black bg-pay rounded-[3px] hover:bg-bottom hover:text-white">
-          <a href="https://trustworthyglass.com/pay-online/">Pay Now</a>
-        </button>
-        <button className="nav-buttons bg-bottom hover:bg-navHover min-w-[190px] w-[200px] h-[53px] text-[17px] mt-[12px] ml-[10%] text-white cursor-pointer showEn">
-          <a href="https://trustworthyglass.com/shower-enclosures/">Shower Enclosures</a>
-        </button>
-        <button className="nav-buttons bg-bottom hover:bg-navHover min-w-[115px] h-[53px] text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer res">
-          <a href="https://trustworthyglass.com/residential/">Residential</a>
-        </button>
-        <button className="nav-buttons bg-bottom hover:bg-navHover min-w-[126px] h-[53px] text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer Com">
-          <a href="https://trustworthyglass.com/commercial/">Commercial</a>
-        </button>
-        <div className="relative group nav-bar">
-      <button
-        className="bg-bottom hover:bg-navHover w-[80px] h-[53px] text-[17px] cursor-pointer mt-[11px] text-white nav-buttons Gal"
-        onMouseEnter={() => setIsDropdownOpen(true)}
-        onMouseLeave={() => setIsDropdownOpen(false)}
-      >
-        <a href="https://trustworthyglass.com/gallery/">Gallery</a>
-      </button>
-      <div
-          className={`absolute ${isDropdownOpen ? '' : 'hidden'} bg-bottom shadow-lg w-[215px] left-[50%] bottom-[-217px] transform -translate-x-1/2 Gal z-20`}
-          onMouseEnter={() => setIsDropdownOpen(true)}
-          onMouseLeave={() => setIsDropdownOpen(false)}
-        >
-            <a href="https://trustworthyglass.com/gallery/residential-glass-gallery/" className="block w-full h-[53px] text-white hover:bg-navHover Gal">
-              <div className="flex flex-col">
-                <p className="ml-[10px] mt-[4px]">
-                  Residential Glass
-                </p>
-                <p className="ml-[10px] mt-[-3px]">Gallery</p>
-              </div>
-            </a>
-            <a href="https://trustworthyglass.com/gallery/commercial-gallery/" className="block h-[41px] text-white hover:bg-navHover Gal">
-              <p className="ml-[10px] pt-[9px]">
-                Commercial Gallery
-              </p>
-            </a>
-            <a href="https://trustworthyglass.com/gallery/shower-door-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover Gal">
-              <p className="ml-[10px] pt-[9px]">
-                Shower Door Gallery
-              </p>
-            </a>
-            <a href="https://trustworthyglass.com/gallery/miscellaneous-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover Gal">
-              <p className="ml-[10px] pt-[9px]">
-                Miscellaneous Gallery
-              </p>
-            </a>
-            <a href="https://trustworthyglass.com/gallery/patterned-glass-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover Gal">
-              <p className="ml-[10px] pt-[9px]">
-                Patterned Glass Gallery
-              </p>
-            </a>
-          </div>
+  <div className="med-large payNow w-full bg-bottom border-b border-black flex flex-row items-start text-start justify-start">
+  <button className="h-[38px] min-w-[90px] payButton ml-[10%] mr-auto justify-center items-center xl:ml-[10%] mt-[22px] outline outline-black outline-[1px] text-[16px] cursor-pointer text-black bg-pay rounded-[3px] hover:bg-bottom hover:text-white">
+    <a href="https://trustworthyglass.com/pay-online/">Pay Now</a>
+  </button>
+  <button className="nav-buttons bg-bottom hover:bg-navHover min-w-[190px] w-[200px] h-[53px] text-[17px] mt-[12px] ml-[10%] text-white cursor-pointer showEn">
+    <a href="https://trustworthyglass.com/shower-enclosures/">Shower Enclosures</a>
+  </button>
+  <button className="nav-buttons bg-bottom hover:bg-navHover min-w-[115px] h-[53px] text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer res">
+    <a href="https://trustworthyglass.com/residential/">Residential</a>
+  </button>
+  <button className="nav-buttons bg-bottom hover:bg-navHover min-w-[126px] h-[53px] text-[17px] ml-[2px] mt-[12px] text-white cursor-pointer Com">
+    <a href="https://trustworthyglass.com/commercial/">Commercial</a>
+  </button>
+  <div className="relative group nav-bar">
+    <button
+      className="bg-bottom hover:bg-navHover w-[80px] h-[53px] text-[17px] cursor-pointer mt-[11px] text-white nav-buttons Gal"
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}
+    >
+      <a href="https://trustworthyglass.com/gallery/">Gallery</a>
+    </button>
+    <div
+      className={`absolute ${isDropdownOpen ? '' : 'hidden'} bg-bottom shadow-lg w-[215px] left-[50%] bottom-[-217px] transform -translate-x-1/2 z-20`}
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}
+    >
+      <a href="https://trustworthyglass.com/gallery/residential-glass-gallery/" className="block w-full h-[53px] text-white hover:bg-navHover">
+        <div className="flex flex-col">
+          <p className="ml-[10px] mt-[4px]">Residential Glass</p>
+          <p className="ml-[10px] mt-[-3px]">Gallery</p>
         </div>
+      </a>
+      <a href="https://trustworthyglass.com/gallery/commercial-gallery/" className="block h-[41px] text-white hover:bg-navHover">
+        <p className="ml-[10px] pt-[9px]">Commercial Gallery</p>
+      </a>
+      <a href="https://trustworthyglass.com/gallery/shower-door-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover">
+        <p className="ml-[10px] pt-[9px]">Shower Door Gallery</p>
+      </a>
+      <a href="https://trustworthyglass.com/gallery/miscellaneous-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover">
+        <p className="ml-[10px] pt-[9px]">Miscellaneous Gallery</p>
+      </a>
+      <a href="https://trustworthyglass.com/gallery/patterned-glass-gallery/" className="block w-full h-[41px] text-white hover:bg-navHover">
+        <p className="ml-[10px] pt-[9px]">Patterned Glass Gallery</p>
+      </a>
+    </div>
+  </div>
         <div className="flex flex-row">
           <button className="nav-buttons bg-bottom hover:bg-navHover w-[168px] h-[53px] mt-[11px] text-[17px] ml-[2px] text-white text-center justify-center cursor-pointer venPar">
             <a href="https://trustworthyglass.com/vendors-partners/">Vendors/Partners</a>
@@ -123,27 +127,28 @@ function App() {
           <path d="M2 8.749h28c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0h-28c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0zM30 15.25h-28c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h28c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0zM30 23.25h-28c-0.414 0-0.75 0.336-0.75 0.75s0.336 0.75 0.75 0.75v0h28c0.414 0 0.75-0.336 0.75-0.75s-0.336-0.75-0.75-0.75v0z"></path>
         </svg>
         {isMenuOpen && (
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center">
-            <button className="h-[38px] min-w-[90px] mt-[22px] outline outline-black outline-[1px] text-[16px] cursor-pointer text-black bg-pay rounded-[3px] hover:bg-bottom hover:text-white">
-              <a href="https://trustworthyglass.com/pay-online/">Pay Now</a>
-            </button>
-            <button className="bg-bottom hover:bg-navHover min-w-[190px] w-[200px] h-[53px] text-[17px] mt-[12px] text-white cursor-pointer showEn">
+          <div className=" mt-[24.5vh] w-full menu-open bg-bottom flex flex-col items-center justify-center">
+            <button className="bg-bottom hover:bg-navHover w-full mt-[15vh] h-[53px] text-[17px] text-white cursor-pointer">
               <a href="https://trustworthyglass.com/shower-enclosures/">Shower Enclosures</a>
             </button>
-            <button className="bg-bottom hover:bg-navHover min-w-[115px] h-[53px] text-[17px] mt-[12px] text-white cursor-pointer res">
+            <button className="bg-bottom hover:bg-navHover w-full h-[53px] text-[17px] text-white cursor-pointer">
               <a href="https://trustworthyglass.com/residential/">Residential</a>
             </button>
-            <button className="bg-bottom hover:bg-navHover min-w-[126px] h-[53px] text-[17px] mt-[12px] text-white cursor-pointer Com">
+            <button className="bg-bottom hover:bg-navHover w-full h-[53px] text-[17px] text-white cursor-pointer">
               <a href="https://trustworthyglass.com/commercial/">Commercial</a>
             </button>
-            <button className="bg-bottom hover:bg-navHover w-[80px] h-[53px] text-[17px] cursor-pointer mt-[11px] text-white Gal">
+            <button className="bg-bottom hover:bg-navHover w-full h-[53px] text-[17px] cursor-pointer text-white">
               <a href="https://trustworthyglass.com/gallery/">Gallery</a>
+            </button>
+            <button className="bg-bottom hover:bg-navHover w-full h-[53px] text-[17px] cursor-pointer text-white"
+            onClick={() => setIsMenuOpen(false)}>
+              ^
             </button>
           </div>
         )}
       </div>
       </div>
-      <div className="flex flex-row w-full">
+      <div className={`flex flex-row w-full content-below ${isMenuOpen ? 'menu-open' : ''}`}>
         <div className="flex flex-row justify-center h-[687px] w-[42vw] custom-gradient">
           <div className="flex flex-col text-center w-[40vw]">
             <p className="text-white text-[23px] mt-[70px] pt-0">Trustworthy Glass is your MN Glass Headquarters</p>
@@ -189,17 +194,19 @@ function App() {
               <p className="text-[15.6px] mt-[15px] text-gray-500">We provide our services in the twin cities and surrounding suburbs. We supply and install all forms of glass products, including:</p>
             </div>
             <div className="flex flex-col md:flex-row md:items-start">
-              <img 
-                src={image1} 
-                className="
-                  h-[200px] w-auto max-h-[70vh] mt-[60px] ml-[20px]
-                  md:h-[60vh] md:w-auto md:max-h-[300px] md:mt-[12.5vh] md:ml-[10vw]
-                  lg:h-[42vw] lg:w-auto lg:max-h-none
-                  xl:h-[600px] xl:w-auto"
-              >
-              </img>
+              <div className="w-full flex items-center justify-center">
+                <img 
+                  src={image1} 
+                  className="
+                    h-[500px] w-[350px] max-h-[70vh] mt-[60px] ml-[20px]
+                    md:h-[60vh] md:w-auto md:max-h-[300px] md:mt-[12.5vh] md:ml-[10vw]
+                    lg:h-[42vw] lg:w-auto lg:max-h-none
+                    xl:h-[600px] xl:w-auto"
+                >
+                </img>
+              </div>
               <div className="flex flex-col w-[26vw] ml-[25px] text-[17px] text-start items-start justify-start">
-                <div className="flex flex-row items-start justify-start">
+                <div className="flex flex-row items-start justify-start checkmarks">
                   <svg className="mt-[13vh] ml-[1vw]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
                       <polyline fill="none" stroke="#446bfa" stroke-width="3.5" stroke-linejoin="bevel" stroke-miterlimit="10" points="13,33 25,45 49,21"/>
@@ -348,19 +355,21 @@ function App() {
                   <p className="ml-[0.25vw] text-gray-500">Reputty Windows</p>
                 </div>
               </div>
-              <img 
-                src={image1} 
-                className="
-                  h-[200px] w-auto max-h-[70vh] mt-[60px] ml-[20px]
-                  md:h-[60vh] md:w-auto md:max-h-[300px] md:mt-[12.5vh] md:ml-[2vw]
-                  lg:h-[42vw] lg:w-auto lg:max-h-none
-                  xl:h-[600px] xl:w-auto"
-              >
-              </img>
+              <div className="flex w-full items-center justify-center">
+                <img 
+                  src={image1} 
+                  className="
+                    h-[500px] w-[350px] max-h-[70vh] mt-[60px] ml-[20px]
+                    md:h-[60vh] md:w-auto md:max-h-[300px] md:mt-[12.5vh] md:ml-[2vw]
+                    lg:h-[42vw] lg:w-auto lg:max-h-none
+                    xl:h-[600px] xl:w-auto"
+                >
+                </img>
+              </div>
             </div>
         </div>
         <div className="text-center items-center justify-center">
-            <p className="text-gray-500 font-bold text-[2.35vh]">We also work with business owners and property managers to repair the following:</p>
+            <p className="text-gray-500 font-bold text-[2.35vh] bottom-content">We also work with business owners and property managers to repair the following:</p>
         </div>
         <div className="mt-[3vh] flex flex-row text-start items-start justify-start text-gray-500 text-[1.9vh]">
             <div className="ml-[15vw]">
