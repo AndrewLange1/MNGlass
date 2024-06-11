@@ -184,6 +184,9 @@
   .bottom-content {
     margin-top: 150vh;
   }
+  .svgs {
+    margin-left: 22vw;
+  }
 }
 
 .cursor-pointer {

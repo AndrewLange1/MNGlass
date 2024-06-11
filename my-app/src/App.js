@@ -205,7 +205,7 @@ function App() {
                 >
                 </img>
               </div>
-              <div className="flex flex-col w-[1000px] ml-[25px] text-[17px] text-start items-start justify-start">
+              <div className="flex flex-col w-[1000px] ml-[25px] text-[17px] text-start items-start justify-start svgs">
                 <div className="flex flex-row items-start justify-start checkmarks">
                   <svg className="mt-[13vh] ml-[1vw]" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="27px" height="27px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
                     <g>
