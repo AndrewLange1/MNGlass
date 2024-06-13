@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/MNGlass/static/css/main.68fc11bf.css",
+    "main.js": "/MNGlass/static/js/main.add57d7c.js",
+    "static/js/453.ed3810f9.chunk.js": "/MNGlass/static/js/453.ed3810f9.chunk.js",
+    "static/media/image1.JPG": "/MNGlass/static/media/image1.0239874478df7e00d199.JPG",
+    "static/media/image4.JPG": "/MNGlass/static/media/image4.7f935eed860352b81eb6.JPG",
+    "static/media/image2.JPG": "/MNGlass/static/media/image2.a5ac8c14310026f5a2bf.JPG",
+    "static/media/image3.JPG": "/MNGlass/static/media/image3.397cecf7abcc45ae1740.JPG",
+    "static/media/LOGO BLUE.png": "/MNGlass/static/media/LOGO BLUE.a9001a873631f1c4915b.png",
+    "index.html": "/MNGlass/index.html",
+    "main.68fc11bf.css.map": "/MNGlass/static/css/main.68fc11bf.css.map",
+    "main.add57d7c.js.map": "/MNGlass/static/js/main.add57d7c.js.map",
+    "453.ed3810f9.chunk.js.map": "/MNGlass/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68fc11bf.css",
+    "static/js/main.add57d7c.js"
+  ]
+}
