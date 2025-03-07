@@ -38,7 +38,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className="bg-white">
       <div className="hidden header xl:h-[51px] l:h-[51px] md:h-[65px] w-full bg-header items-center justify-center px-4">
         <p className="text-white l:text-[14px] xl:text-[14px] md:text-[12px] text-montesserat items-center text-center">
           Residential and Commercial Glass installation for the Twin Cities, St Paul, Minneapolis, and surrounding suburbs Anoka, Ramsey, and Hennepin Counties.
